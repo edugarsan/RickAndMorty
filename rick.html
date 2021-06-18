@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rick and Morty</title>
+    <style>
+        .wrapper {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 56px;
+            color: white;
+            text-align: center;
+            margin: 30px;
+            font-family: fantasy;
+        }
+
+        #resultadoPokemon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            flex-direction: column-reverse;
+        }
+
+        .pokemon-card {
+            background-color: white;
+            max-width: 100%;
+            margin: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 5px double black;
+        }
+
+        .pokemon-card img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        .pokemon-card .nombre {
+            font-weight: bold;
+            padding: 10px 0 0 0;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        .pokemon-card .nombre:first-letter {
+            text-transform: uppercase;
+        }
+
+
+        .pokemon-seleccionado {
+            position: fixed;
+            background-color: white;
+            bottom: 50px;
+            right: 50px;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            border: 5px solid black;
+
+        }
+
+        .pokemon-seleccionado #seleccionado {
+            color: rgb(155, 6, 6);
+            font-weight: bold;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .pokeball {
+            height: 120px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .versus {
+            height: 120px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        #poke {
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 24px;
+            border: 0;
+        }
+
+        #buscar {
+            background-color: white;
+            border: 0;
+            border-radius: 10px;
+            color: rgb(155, 6, 6);
+            font-weight: bold;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        h6 {
+            font-size: 16px;
+            color: gray;
+            padding: 5px;
+        }
+
+        .detalleRick {
+            padding: 20px;
+        }
+
+        body {
+            background-color: rgb(58 132 48);
+            font-family: sans-serif;
+        }
+
+        .rickImagen {
+            width: 220px;
+            cursor: pointer;
+            margin-top: 20px;
+            filter: grayscale();
+            transition: 1s;
+            margin-bottom: 40px;
+        }
+
+        .rickImagen:hover{
+            filter: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Rick and Morty</h1>
+
+    <div class="wrapper">
+        <img src="images/ram.png" alt="VS" class="rickImagen" onclick="personajeAleatoria()">
+
+        <section id="resultadoPersonajeAleatorio">
+
+        </section>
+
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
